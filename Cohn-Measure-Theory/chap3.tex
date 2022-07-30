@@ -237,8 +237,50 @@ For simplicity, we will deal with $\R$-valued functions only. For further remark
 \begin{example}
     \begin{enumerate}
 	\item Consider $\left( X, \scrB (\R) , \lambda \right)$. Consider the sequence of functions $\{\chi _ {[n, \infty)}\}$. Then $\chi_{[n, \infty)} \to 0$ function everywhere (hence, almost everywhere).But it does not converge in measure! To see this take $\varepsilon = \frac{1}{2}$. 
-	\item 
+	\item Consider the Borel subsets of $[0, 1)$ with the Lebesgue measure. Consider the sequence whose first term is the characteristic function of $[0,1)$. The next two terms are the characteristic functions of $[0,\frac{1}{2}$ and $[\frac{1}{2}, 1)$. The next four terms are the characteristic functions of $[0, 1/4)$, $[1/4,1/2)$, $[1/2, 3/4)$ and $[3/4, 1)$. Well this goes on\ldots
+
+		Now, let $\varepsilon > 0$ be given. Clearly this sequence converges to zero in measure but for each $x\in [0,1)$, $\left\{ f_n (x) \right\}$ has infinitely many zeroes and ones, so, it does not converge!
     \end{enumerate}
 \end{example}
+
+\begin{proposition}[$\mu<\infty$ and $\left\{ f_n \right\}\to f$ a.e. implies $\left\{ f_n \right\}\to f$ in measure]
+    Let $(X, \scrA, \mu )$ be a measure space. Let $f, f_1, f_2 \ldots $ be a sequence of $\scrA$-measurable real valued functions on $X$. If $\mu$ is finite and $\left\{ f_n \right\}$ converges almost everywhere to $f$ then $\left\{ f_n \right\}$ converges in measure to $f$.
+\end{proposition}
+\begin{proof}
+   We need to prove that
+   $$\lim_n \mu \left( \left\{ x\in X : |f_n (x) -f(x)| > \varepsilon \right\} \right) = 0$$
+   for every $\varepsilon > 0$. Let $\varepsilon > 0 $ be given. Define $A_n=\left\{ x\in X : |f_n (x) -f(x)| > \varepsilon \right\}$ and $B_n = \cup _{k\ge n} A_k$.
+
+   It is easy to see that $\left\{ B_n \right\}$ is a decreasing sequence of subsets of $X$. We claim that $\cap_{n} B_n$ is contained in the set $\left\{ x\in X : \left\{ f_n \left( x \right) \right\} \text{does not converge to } f\left( x \right) \right\}$. To see this, let $x\in \cap B_n$, then $x\in A_n$ for infinitely many $n$. If $\left\{ f_n (x) \right\} \to f \left( x \right)$ then there must be some $N\in\N$ such that $|f_n \left( x \right) - f\left( x \right)< \varepsilon$ for every $n\ge N$. Since $x\in A_n$ for infinitely many $n$, we can select a $k\ge N$ such that $x\in A_k$. Then we have that $\varepsilon < |f_k (x) -f(x)| < \varepsilon$ which is absurd! Note that the first inequality is due to $x\in A_k$ and the second inequality holds due to $k \ge N$. Thus, this completes the proof of our claim.
+
+   Notice that the set $\left\{ x\in X : \left\{ f_n (x) \right\} \text{ does not converge to } f\left( x \right) \right\}$ is $\mu$- negligible set. Thus $\mu \left( \cap _n B_n \right) = 0$.
+
+   Since $\left\{ B_n \right\}$ is a decreasing sequence of sets and $\mu < \infty$, Proposition 1.2.5 in the book implies that $\lim _n \mu \left( B_n \right) = \mu \left( \cap _n B_n \right) = 0$.
+
+   Now, observe that $A_n \subseteq B_n$ for every $n\in \N$. This observation implies that $\mu (A_n) \le \mu \left( B_n \right)$ and hence $\mu \left( A_n \right) = 0$ as $n\to \infty$.
+   
+   This completes the proof.
+\end{proof}
+
+\begin{proposition}
+    Let $\left( X, \scrA , \mu \right)$ be a measure space. Let $f$ and $f_1 , f_2, \ldots$ be a sequence of $\scrA$ measurable real valued functions on $X$. If $\left\{ f_n \right\}$ converges to $f$ in measure then then there is a subsequence $\left\{ f_{n_k} \right\}$ of $\left\{ f_n \right\}$ which converges almost everywhere to $f$.
+\end{proposition}
+
+Let $X$ be a set. A sequence of real valued functions $\left\{ f_n \right\}$ on $X$ is said to \textit{converge uniformly} to a real valued function $f$ on $X$ if for every $\varepsilon > 0$ there is a $N \in \N$ such that for every $n\ge N$ and every $x\in X$, we have that $|f_n (x) - f(x)| < \varepsilon$.
+
+\begin{proposition}[Egoroff's Theoren]
+    Let $\left( X, \scrA , \mu \right)$ be a measure space. Let $f$ and $f_1 , f_2 , \ldots$ be a sequence of $\scrA$-measurable real valued functions on $X$. If $\mu$ is finite and $\left\{ f_n \right\}$ converges to $f$ almost everywhere then for each $\varepsilon >0$ there is some $B\in \scrA$ satisfying $\mu \left( B^c \right) < \varepsilon$ and $\left\{ f_n \right\} $ converges to $f$ uniformly on $B$.
+\end{proposition}
+
+Egoroff's Theorem provides a motivation for the following definition: 
+\begin{definition}
+    Let $\left( X, \scrA , \mu \right)$ be a measure space. Let $f$ and $f_1 , f_2 , \ldots$ be a sequence of $\scrA$-measurable real valued functions on $X$. Then $\left\{ f_n \right\}$ converges to $f$ \textit{almost uniformly} if for each $\varepsilon > 0$ there is some $B\in \scrA$ such that $\mu \left( B^c \right) < \varepsilon$ and $\left\{ f_n \right\} $ converges to $f$ uniformly on $B$.
+\end{definition}
+
+We remark that if $\left\{ f_n \right\}$ converges to $f$ almost uniformly then $\left\{ f_n \right\}$ converges to $f$ almost everywhere. To see this, for $n\in\N $, select $B_n \in \scrA$ such that $\mu \left( B_n ^c \right) < \frac{1}{n}$ and $\left\{ f_n \right\}$ converges to $f$ uniformly on $B_n$. Let $B=\bigcap_n {B_n}$. Then $\mu (B^c) \le \mu (B_n ^c) < \frac{1}{n} $ for every $n\in\N$. Thus $\mu \left( B^c \right)=0$. We claim that $\lim_n f_n = f$ everywhere on $B$. This is easy to see: if $x\in B$ then $x\in B_n$ for some $n\in\N$ and since $\left\{ f_n \right\}$ converges to $f$ uniformly on $B_n$, we have that $\lim_n f_n \left( x \right) = f\left( x \right)$.
+
+It follows from Egoroff's theorem that on a finite measure space, almost everywhere convergence is equivalent to almost uniform convergence.
+
+
 
 \end{document}
