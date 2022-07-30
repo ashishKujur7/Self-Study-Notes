@@ -271,6 +271,25 @@ Let $X$ be a set. A sequence of real valued functions $\left\{ f_n \right\}$ on 
 \begin{proposition}[Egoroff's Theoren]
     Let $\left( X, \scrA , \mu \right)$ be a measure space. Let $f$ and $f_1 , f_2 , \ldots$ be a sequence of $\scrA$-measurable real valued functions on $X$. If $\mu$ is finite and $\left\{ f_n \right\}$ converges to $f$ almost everywhere then for each $\varepsilon >0$ there is some $B\in \scrA$ satisfying $\mu \left( B^c \right) < \varepsilon$ and $\left\{ f_n \right\} $ converges to $f$ uniformly on $B$.
 \end{proposition}
+\begin{proof}[Outline of Proof]
+    Let $\varepsilon > 0$. For each $n$, let $g_n = \sup_{k\ge n} |f_n -f|$. 
+
+    Let $F=\left\{ x\in X : \left\{ f_n \left( x \right) \right\} \text{ does not converge to } f\left( x \right) \right\}$. Then by assumption $F$ is a $\mu$-negligible set.
+
+    We claim that $g_n$ is finite almost everywhere for every $n$. Let $G_n = \left\{ x \in X : g_n (x) = + \infty \right\}$. We show that $G_n \subseteq F$. If we show this then $\mu \left( G_n \right) = 0$ and we will done with the proof of our claim.
+
+    It is rather easy to show that $F^c \subseteq G_n ^c$. Let $x\in F$. Then there is some $N\in\N$ such that $|f_k \left( x \right)- f(x)|<1$ for every $k\ge N$. 
+
+    If $n\ge N$ then we have that $g_n (x) = \sup_{k\ge n} |f_k (x)- f(x)|\le 1$.
+
+    If $n < N$ then $g_n (x)\le \max \left\{ |f_n (x) - f(x)|, \ldots , |f_{N-1}-f(x)| ,1 \right\}$.
+
+    Either ways, $g_n (x) < +\infty$. Thus this shows that $x \in G_n^c$.
+
+    Now, let $G=\left\{ x\in X : \left\{ g_n \left( x \right) \right\} \text{ does not converge to } 0 \right\}$. Complete the proof by showing that $G\subseteq F$ and following up the textbook!
+
+\end{proof}
+
 
 Egoroff's Theorem provides a motivation for the following definition: 
 \begin{definition}
