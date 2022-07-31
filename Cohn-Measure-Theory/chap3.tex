@@ -235,6 +235,7 @@ For simplicity, we will deal with $\R$-valued functions only. For further remark
 \end{remark}
 
 \begin{example}
+    \label{ex:conM-conAE}
     \begin{enumerate}
 	\item Consider $\left( X, \scrB (\R) , \lambda \right)$. Consider the sequence of functions $\{\chi _ {[n, \infty)}\}$. Then $\chi_{[n, \infty)} \to 0$ function everywhere (hence, almost everywhere).But it does not converge in measure! To see this take $\varepsilon = \frac{1}{2}$. 
 	\item Consider the Borel subsets of $[0, 1)$ with the Lebesgue measure. Consider the sequence whose first term is the characteristic function of $[0,1)$. The next two terms are the characteristic functions of $[0,\frac{1}{2}$ and $[\frac{1}{2}, 1)$. The next four terms are the characteristic functions of $[0, 1/4)$, $[1/4,1/2)$, $[1/2, 3/4)$ and $[3/4, 1)$. Well this goes on\ldots
@@ -243,7 +244,7 @@ For simplicity, we will deal with $\R$-valued functions only. For further remark
     \end{enumerate}
 \end{example}
 
-\begin{proposition}[$\mu<\infty$ and $\left\{ f_n \right\}\to f$ a.e. implies $\left\{ f_n \right\}\to f$ in measure]
+\begin{proposition}[$\mu<\infty$ and $\left\{ f_n \right\}\to f$ a.e.\ implies $\left\{ f_n \right\}\to f$ in measure]
     Let $(X, \scrA, \mu )$ be a measure space. Let $f, f_1, f_2 \ldots $ be a sequence of $\scrA$-measurable real valued functions on $X$. If $\mu$ is finite and $\left\{ f_n \right\}$ converges almost everywhere to $f$ then $\left\{ f_n \right\}$ converges in measure to $f$.
 \end{proposition}
 \begin{proof}
@@ -301,5 +302,31 @@ We remark that if $\left\{ f_n \right\}$ converges to $f$ almost uniformly then 
 It follows from Egoroff's theorem that on a finite measure space, almost everywhere convergence is equivalent to almost uniform convergence.
 
 
+\begin{definition}
+    Suppose that $\left( X, \scrA , \mu \right)$ is a measure space and $f, f_1,f_2 , \ldots$ belong to $\calL \left( X, \scrA , \mu , \R \right)$. Then $\left\{ f_n \right\}$ converges to $f$ in mean if
+    $$\lim_n \int |f_n - f | \, d\mu = 0$$
+\end{definition}
+
+
+\begin{proposition}[convergence in mean implies convergence in measure]
+    Suppose that $\left( X, \scrA , \mu \right)$ is a measure space and $f, f_1,f_2 , \ldots$ belong to $\calL \left( X, \scrA , \mu , \R \right)$. If $\left\{ f_n \right\}$ converges to $f$ in mean then $\left\{ f_n \right\}$ converges to $f$ in measure.
+\end{proposition}
+
+\begin{example}[convergence in mean does not imply a.e. convergence]
+    See Example ~\ref{ex:conM-conAE}. 
+\end{example}
+
+\begin{example}[neither convergence in measure nor convergence a.e. imply convergence in mean]
+    See book!
+\end{example}
+
+However, under additional hypothesis we have the following:
+
+\begin{proposition}
+    Let $\left( X, \scrA , \mu \right)$ be a measure space. Let $f$ and $f_1 , f_2 , \ldots$ belongs to $\scrL \left( X , \scrA , \mu , \R \right)$. If $\left\{ f_n \right\}$ converges to $f$ a.e. or in measure and there is a nonnegative function $g$ on $X$ such that $|f_n|\le g$ and $|f|\le g$ for every $n=1,2, \ldots$ holds a.e. then $\left\{ f_n \right\}$ converges to $f$ in mean.
+\end{proposition}
+
+
+\section{Normed Spaces}
 
 \end{document}

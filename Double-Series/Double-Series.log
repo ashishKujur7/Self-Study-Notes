@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.6.1)  31 JUL 2022 14:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.6.1)  31 JUL 2022 23:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**chap3.tex
-(./chap3.tex
+**Double-Series.tex
+(./Double-Series.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-01-09> xparse <2020-03-03>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -478,48 +478,49 @@ File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count287
 \l__pdf_internal_box=\box50
 )
-(./chap3.aux)
-\openout1 = `chap3.aux'.
+(./Double-Series.aux)
+\openout1 = `Double-Series.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 217.
-LaTeX Font Info:    ... okay on input line 217.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 217.
-LaTeX Font Info:    ... okay on input line 217.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 217.
-LaTeX Font Info:    ... okay on input line 217.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 217.
-LaTeX Font Info:    ... okay on input line 217.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 217.
-LaTeX Font Info:    ... okay on input line 217.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 217.
-LaTeX Font Info:    ... okay on input line 217.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 217.
-LaTeX Font Info:    ... okay on input line 217.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 217.
-LaTeX Font Info:    ... okay on input line 217.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 217.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 218.
 LaTeX Font Info:    Trying to load font information for FML+futm on input line 
-217.
- (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutm.fd
+218.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 217.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 218.
 LaTeX Font Info:    Trying to load font information for FMS+futm on input line 
-217.
+218.
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 217.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 217.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 218.
 LaTeX Font Info:    Trying to load font information for FMX+futm on input line 
-217.
+218.
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 217.
+LaTeX Font Info:    ... okay on input line 218.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -555,7 +556,7 @@ LaTeX Font Info:    ... okay on input line 217.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 217.
+Package hyperref Info: Link coloring OFF on input line 218.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -567,13 +568,13 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count288
 )
-LaTeX Info: Redefining \ref on input line 217.
-LaTeX Info: Redefining \pageref on input line 217.
-LaTeX Info: Redefining \nameref on input line 217.
+LaTeX Info: Redefining \ref on input line 218.
+LaTeX Info: Redefining \pageref on input line 218.
+LaTeX Info: Redefining \nameref on input line 218.
 
-(./chap3.out) (./chap3.out)
+(./Double-Series.out) (./Double-Series.out)
 \@outlinefile=\write3
-\openout3 = `chap3.out'.
+\openout3 = `Double-Series.out'.
 
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -590,8 +591,8 @@ LaTeX Info: Redefining \nameref on input line 217.
 \makeMPintoPDFobject=\count294
 \everyMPtoPDFconversion=\toks34
 )
-LaTeX Font Info:    Redeclaring math accent \widehat on input line 217.
-LaTeX Font Info:    Redeclaring math accent \widetilde on input line 217.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 218.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 218.
 LaTeX Font Info:    Trying to load font information for FML+futmi on input line
  220.
  (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutmi.fd
@@ -627,10 +628,6 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 9.19998pt on input line 220.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 7.35999pt on input line 220.
- (./chap3.toc)
-\tf@toc=\write4
-\openout4 = `chap3.toc'.
-
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
 (Font)              scaled to size 11.03998pt on input line 224.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
@@ -643,76 +640,33 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 8.27998pt on input line 224.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.43999pt on input line 224.
-LaTeX Font Info:    Trying to load font information for U+futs on input line 23
-4.
+ [1
 
-(/usr/share/texlive/texmf-dist/tex/latex/fourier/ufuts.fd
-File: ufuts.fd 2004/03/02 Fontinst v1.926 font definitions for U/futs.
-)
-Overfull \hbox (1.93958pt too wide) in paragraph at lines 240--241
-[]\T1/futs/m/n/12 Consider $[]$. Con-sider the se-quence of func-tions $\FMS/fu
-tm/m/n/12 f\FML/futmi/m/it/12 ^^_[]\FMS/futm/m/n/12 g$\T1/futs/m/n/12 . Then
- []
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (27.02022pt too wide) in paragraph at lines 257--258
-[]\T1/futs/m/n/12 Notice that the set $[]$ is $\FML/futmi/m/it/12 ^^V$\T1/futs/
-m/n/12 - neg-li-gi-ble set. Thus $\FML/futmi/m/it/12 ^^V [] \FMS/futm/m/n/12 Å
- []
-
-[2]
-Overfull \hbox (24.688pt too wide) in paragraph at lines 306--307
-[][]\T1/futs/b/n/12 Definition ü1.0.8. []\T1/futs/m/n/12 Sup-pose that $[]$ is 
-a mea-sure space and $\FML/futmi/m/it/12 f; f[]; f[]; []$ \T1/futs/m/n/12 be-lo
-ng to $\FMS/futm/m/n/12 L []$\T1/futs/m/n/12 .
- []
-
-
-Overfull \hbox (17.59541pt too wide) in paragraph at lines 312--313
-[][]\T1/futs/b/n/12 Proposition ü1.0.9 \T1/futs/m/n/12 (con-ver-gence in mean i
-m-plies con-ver-gence in mea-sure)\T1/futs/b/n/12 . []\T1/futs/m/it/12 Sup-pose
- that $[]$
- []
-
-
-Overfull \hbox (12.18622pt too wide) in paragraph at lines 326--327
-[][]\T1/futs/b/n/12 Proposition ü1.0.12. []\T1/futs/m/it/12 Let $[]$ be a mea-s
-ure space. Let $\FML/futmi/m/it/12 f$ \T1/futs/m/it/12 and $\FML/futmi/m/it/12 
-f[]; f[]; []$ \T1/futs/m/it/12 be-longs to $\U/rsfs/m/n/12 L []$\T1/futs/m/it/1
-2 .
- []
-
-[3] (./chap3.aux)
-Package rerunfilecheck Info: File `chap3.out' has not changed.
-(rerunfilecheck)             Checksum: 929DD424F445C8280BA13A62C088A2A7;103.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./Double-Series.a
+ux)
+Package rerunfilecheck Info: File `Double-Series.out' has not changed.
+(rerunfilecheck)             Checksum: 0B7AFF2D0196254F91EFA481D2B15C0F;285.
  ) 
 Here is how much of TeX's memory you used:
- 8640 strings out of 479304
- 125569 string characters out of 5869780
- 458988 words of memory out of 5000000
- 25614 multiletter control sequences out of 15000+600000
- 478890 words of font info for 117 fonts, out of 8000000 for 9000
+ 8601 strings out of 479304
+ 125219 string characters out of 5869780
+ 459156 words of memory out of 5000000
+ 25590 multiletter control sequences out of 15000+600000
+ 481777 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,7n,74p,851b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{theorem.1.0.3} has been referenced but does not e
-xist, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/fourier/fourier-mcl.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/fourier/fourier-mex.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/fourier/fourier-mlit.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/fourier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/fourier/fourier-orns.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/u
-topia/putb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on chap3.pdf (3 pages, 86475 bytes).
+ 71i,10n,74p,643b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/fourier/fourier-mlit.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/fourier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/adobe/utopia/putb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/ut
+opia/putr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a
+.pfb>
+Output written on Double-Series.pdf (3 pages, 70644 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 79 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

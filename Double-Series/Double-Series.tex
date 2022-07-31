@@ -1,0 +1,321 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{mathrsfs, enumitem}
+\usepackage{dirtytalk,hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{fourier}
+
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{plain}
+\newcommand{\ignore}[1]{}
+
+% section symbol
+\renewcommand{\thesection}{\S\arabic{section}}
+
+% \renewcommand{\Pr}{{\bf Pr}}
+% \newcommand{\Prx}{\mathop{\bf Pr\/}}
+% \newcommand{\E}{{\bf E}}
+% \newcommand{\Ex}{\mathop{\bf E\/}}
+% \newcommand{\Var}{{\bf Var}}
+% \newcommand{\Varx}{\mathop{\bf Var\/}}
+% \newcommand{\Cov}{{\bf Cov}}
+% \newcommand{\Covx}{\mathop{\bf Cov\/}}
+
+% shortcuts for symbol names that are too long to type
+\newcommand{\eps}{\epsilon}
+\newcommand{\lam}{\lambda}
+\renewcommand{\l}{\ell}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\wh}{\widehat}
+\newcommand{\wt}{\widetilde}
+
+% % "blackboard-fonted" letters for the reals, naturals etc.
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\C}{\mathbb C}
+
+% % operators that should be typeset in Roman font
+% \newcommand{\poly}{\mathrm{poly}}
+% \newcommand{\polylog}{\mathrm{polylog}}
+% \newcommand{\sgn}{\mathrm{sgn}}
+% \newcommand{\avg}{\mathop{\mathrm{avg}}}
+% \newcommand{\val}{{\mathrm{val}}}
+
+% % complexity classes
+% \renewcommand{\P}{\mathrm{P}}
+% \newcommand{\NP}{\mathrm{NP}}
+% \newcommand{\BPP}{\mathrm{BPP}}
+% \newcommand{\DTIME}{\mathrm{DTIME}}
+% \newcommand{\ZPTIME}{\mathrm{ZPTIME}}
+% \newcommand{\BPTIME}{\mathrm{BPTIME}}
+% \newcommand{\NTIME}{\mathrm{NTIME}}
+
+% values associated to optimization algorithm instances
+\newcommand{\Opt}{{\mathsf{Opt}}}
+\newcommand{\Alg}{{\mathsf{Alg}}}
+\newcommand{\Lp}{{\mathsf{Lp}}}
+\newcommand{\Sdp}{{\mathsf{Sdp}}}
+\newcommand{\Exp}{{\mathsf{Exp}}}
+
+% if you think the sum and product signs are too big in your math mode; x convention
+% as in the probability operators
+\newcommand{\littlesum}{{\textstyle \sum}}
+\newcommand{\littlesumx}{\mathop{{\textstyle \sum}}}
+\newcommand{\littleprod}{{\textstyle \prod}}
+\newcommand{\littleprodx}{\mathop{{\textstyle \prod}}}
+
+% horizontal line across the page
+\newcommand{\horz}{
+\vspace{-.4in}
+\begin{center}
+\begin{tabular}{p{\textwidth}}\\
+\hline
+\end{tabular}
+\end{center}
+}
+
+% calligraphic letters
+\newcommand{\calA}{{\cal A}}
+\newcommand{\calB}{{\cal B}}
+\newcommand{\calC}{{\cal C}}
+\newcommand{\calD}{{\cal D}}
+\newcommand{\calE}{{\cal E}}
+\newcommand{\calF}{{\cal F}}
+\newcommand{\calG}{{\cal G}}
+\newcommand{\calH}{{\cal H}}
+\newcommand{\calI}{{\cal I}}
+\newcommand{\calJ}{{\cal J}}
+\newcommand{\calK}{{\cal K}}
+\newcommand{\calL}{{\cal L}}
+\newcommand{\calM}{{\cal M}}
+\newcommand{\calN}{{\cal N}}
+\newcommand{\calO}{{\cal O}}
+\newcommand{\calP}{{\cal P}}
+\newcommand{\calQ}{{\cal Q}}
+\newcommand{\calR}{{\cal R}}
+\newcommand{\calS}{{\cal S}}
+\newcommand{\calT}{{\cal T}}
+\newcommand{\calU}{{\cal U}}
+\newcommand{\calV}{{\cal V}}
+\newcommand{\calW}{{\cal W}}
+\newcommand{\calX}{{\cal X}}
+\newcommand{\calY}{{\cal Y}}
+\newcommand{\calZ}{{\cal Z}}
+
+% bold letters (useful for random variables)
+%----------------------------------------------
+% \renewcommand{\a}{{\boldsymbol a}}
+% \renewcommand{\b}{{\boldsymbol b}}
+% \renewcommand{\c}{{\boldsymbol c}}
+% \renewcommand{\d}{{\boldsymbol d}}
+% \newcommand{\e}{{\boldsymbol e}}
+% \newcommand{\f}{{\boldsymbol f}}
+% \newcommand{\g}{{\boldsymbol g}}
+% \newcommand{\h}{{\boldsymbol h}}
+% \renewcommand{\i}{{\boldsymbol i}}
+% \renewcommand{\j}{{\boldsymbol j}}
+% \renewcommand{\k}{{\boldsymbol k}}
+% \newcommand{\m}{{\boldsymbol m}}
+% \newcommand{\n}{{\boldsymbol n}}
+% \renewcommand{\o}{{\boldsymbol o}}
+% \newcommand{\p}{{\boldsymbol p}}
+% \newcommand{\q}{{\boldsymbol q}}
+% \renewcommand{\r}{{\boldsymbol r}}
+% \newcommand{\s}{{\boldsymbol s}}
+% \renewcommand{\t}{{\boldsymbol t}}
+% \renewcommand{\u}{{\boldsymbol u}}
+% \renewcommand{\v}{{\boldsymbol v}}
+% \newcommand{\w}{{\boldsymbol w}}
+% \newcommand{\x}{{\boldsymbol x}}
+% \newcommand{\y}{{\boldsymbol y}}
+% \newcommand{\z}{{\boldsymbol z}}
+% \newcommand{\A}{{\boldsymbol A}}
+% \newcommand{\B}{{\boldsymbol B}}
+% \newcommand{\C}{{\boldsymbol C}}
+% \newcommand{\D}{{\boldsymbol D}}
+% \newcommand{\E}{{\boldsymbol E}}
+% \newcommand{\F}{{\boldsymbol F}}
+% \newcommand{\G}{{\boldsymbol G}}
+% \renewcommand{\H}{{\boldsymbol H}}
+% \newcommand{\I}{{\boldsymbol I}}
+% \newcommand{\J}{{\boldsymbol J}}
+% \newcommand{\K}{{\boldsymbol K}}
+% \renewcommand{\L}{{\boldsymbol L}}
+% \newcommand{\M}{{\boldsymbol M}}
+% \renewcommand{\O}{{\boldsymbol O}}
+% \renewcommand{\P}{{\mathbb{P}}}
+% \newcommand{\Q}{{\boldsymbol Q}}
+% \newcommand{\R}{{\boldsymbol R}}
+% \renewcommand{\S}{{\boldsymbol S}}
+% \newcommand{\T}{{\boldsymbol T}}
+% \newcommand{\U}{{\boldsymbol U}}
+% \newcommand{\V}{{\boldsymbol V}}
+% \newcommand{\W}{{\boldsymbol W}}
+% \newcommand{\X}{{\boldsymbol X}}
+% \newcommand{\Y}{{\boldsymbol Y}}
+% \newcommand{\Z}{{\boldsymbol Z}}
+
+% script letters
+\newcommand{\scrA}{{\mathscr A}}
+\newcommand{\scrB}{{\mathscr B}}
+\newcommand{\scrC}{{\mathscr C}}
+\newcommand{\scrD}{{\mathscr D}}
+\newcommand{\scrE}{{\mathscr E}}
+\newcommand{\scrF}{{\mathscr F}}
+\newcommand{\scrG}{{\mathscr G}}
+\newcommand{\scrH}{{\mathscr H}}
+\newcommand{\scrI}{{\mathscr I}}
+\newcommand{\scrJ}{{\mathscr J}}
+\newcommand{\scrK}{{\mathscr K}}
+\newcommand{\scrL}{{\mathscr L}}
+\newcommand{\scrM}{{\mathscr M}}
+\newcommand{\scrN}{{\mathscr N}}
+\newcommand{\scrO}{{\mathscr O}}
+\newcommand{\scrP}{{\mathscr P}}
+\newcommand{\scrQ}{{\mathscr Q}}
+\newcommand{\scrR}{{\mathscr R}}
+\newcommand{\scrS}{{\mathscr S}}
+\newcommand{\scrT}{{\mathscr T}}
+\newcommand{\scrU}{{\mathscr U}}
+\newcommand{\scrV}{{\mathscr V}}
+\newcommand{\scrW}{{\mathscr W}}
+\newcommand{\scrX}{{\mathscr X}}
+\newcommand{\scrY}{{\mathscr Y}}
+\newcommand{\scrZ}{{\mathscr Z}}
+
+\title{Double Sequences and Series}
+\author{Ashish Kujur}
+\date{Last Updated : \today}
+
+\begin{document}
+\maketitle
+
+\section{Double Sequences}
+\subsection{Introduction and Definition}
+\begin{definition}
+    Let $X$ be a nonempty set. A double sequence $\left( a_{mn} \right)$ is a map $a: \N \times \N \to X$. We write $ a_{m, n} = a\left( m, n \right)$ for all $m,n$. 
+    \label{def:doubleSeq}
+\end{definition}
+
+In this article, we study the case where $X=\R$ or $X=\C$.
+
+We can view a double sequence $\left( a_{mn} \right)$ as a two dimensional array in the following fashion:
+
+$$\begin{matrix}
+    a_{11} & a_{12} & a_{13} & \ldots \\
+
+    a_{21} & a_{22} & a_{23} & \ldots \\
+    
+    a_{31} & a_{32} & a_{33} & \ldots \\
+    
+    \hdots & \hdots & \hdots & \ddots
+\end{matrix}$$
+
+Suppose that the sequence $\left\{ a_{mn} \right\}_{n\in \N}$ converges to $\alpha _n$ for every $m\in\N$. Furthermore, suppose that the sequence $\left\{ a_{mn} \right\}_{m\in \N}$ converges to $\beta _m$ for every $n\in\N$. Evenmore, let us suppose that $\left\{ \alpha _n \right\} \to \alpha$ and $\left\{ \beta _n \right\} \to \beta$. We may want to define that the series $\left\{ a_{mn} \right\}$ converges if the aforementioned hypothesis hold and $\alpha = \beta$. Definitions are never wrong but this definition is very restrictive as we want too many sequences formed from the double series to be convergent.
+
+
+After some digression, we come to definition:
+
+\begin{definition}
+    Let $\left\{ x_{mn} \right\}_{m,n}$ be a double sequence in $\C$. We say that $\left\{ x_{mn} \right\}_{m,n}$ converges if there is some $l \in \C$ if for every $\varepsilon > 0$ there is some $N \in \N$ such that for every $m,n \ge N$, we have $|x_{m,n} - l| < \varepsilon$.
+    \label{def:convDoubleSeq}
+\end{definition}
+
+\subsection{Examples of Double Sequences}
+
+\begin{enumerate}
+    \item We give an example of a double series whose iterated limits exist and are not equal and the double series is not convergent in the sense of Definition \ref{def:convDoubleSeq}.
+
+	Consider the sequence $\left\{ a_{mn} \right\}$ whose entries are given by $a_{mn}= \begin{cases} 1 & m\ge n \\ 0 & \text{otherwise} \end{cases}$. Here's a two dimensional array representation of the double series $\left\{ a_{mn} \right\}$:
+
+	$$\begin{matrix}
+		1 & 0 & 0 & \ldots & 0 & \ldots \\
+		1 & 1 & 0 & \ldots & 0 & \ldots \\
+		\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+1 & 1 & 1 & \ldots & 1 & 0 & \ldots  \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots
+	\end{matrix}$$
+	It is rather easy to see that the every row sequence is eventually zero and hence converges to $0$ and that every column sequence is eventually $1$ and hence converges to $1$. But the double sequence is not convergent. If it were convergent, then there must be some $l\in \C$ and $N\in \N$ such that for every $m,n\ge N$, we have that $|a_{mn}-l|\le 1/2$. But note that $|a_{N, N+1} - l| < 1/2$ implies $|l| < 1/2$. But then $|a_{N,N}-l|<1/2$ implies that $|l-1|<1/2$. But note the two aforementioned inequality cannot hold together. 
+
+    \item Consider the double sequence $\left\{ a_{mn} \right\}$ givn by $a_{mn} = \left( -1 \right)^{ m+n} \left( \frac{1}{m} + \frac{1}{n} \right)$. It is very easy to see that the double series $\left\{ a_{m,n} \right\}$ converges to $0$ while none of the row sequences and the column sequences converge!
+\end{enumerate}
+
+
+\subsection{Some Theorem on Double Sequences}
+
+\begin{theorem}
+    Let $\left\{ a_{mn} \right\}$ be a double sequence. Suppose that all the row sequences and the column sequences converge and let $\beta _n = \lim _m a_{mn}$ and $\alpha _m = \lim _n a_{mn}$ for every $m,n$ and further suppose that the double sequence converges. Then the following holds
+    \begin{equation*}
+	\lim_m \alpha_m = \lim_{m,n} a_{mn} = \lim_n \beta_n
+    \end{equation*}
+    \label{thm:1.1}
+\end{theorem}
+\begin{proof}
+    We first show that $\alpha = \lim_m \alpha _m$ and $\ell = \lim_{m,n} a_{mn}$ are equal. Let $\varepsilon > 0$ be given. Then there is some $N\in \N$ such that for every $n\ge N$, we have that $|a_{mn} - \ell | < \varepsilon$. Taking limit as $n \to \infty$, we get $|\alpha _m - l | \le \varepsilon$ for all $m \ge N$. Taking limit as $m \to \infty$, we have that $| \alpha - \ell | \le \varepsilon $. This proves that $\alpha = \ell$. One can show the other equality similarly.
+\end{proof}
+
+\begin{theorem}
+    Suppose that a double sequence $\left\{ a_{mn} \right\}$ converges to $\ell$ then the diagonal sequence $\left\{ a_{nn} \right\}_{n}$ converges to $\ell$.
+    \label{thm:1.2}
+\end{theorem}
+\begin{proof}
+    Let $\left\{ d_n \right\}$ be the sequence defined by $d_n = a_{nn}$ for every $n$. Let $\varepsilon > 0$ be given. Then there is some $N\in\N$ such that for every $m,n \ge N$, $|a_{mn}- \ell | <\varepsilon$. It is easy to see that for $n\ge N$, we have that $|d_n - \ell| < \varepsilon$. This completes the proof.
+\end{proof}
+
+We try to capture Cauchy-ness in this double sequence setting:
+
+\begin{definition}
+    Let $\left\{ a_{mn} \right\}$ be a double sequence. We say that $\left\{ a_{mn} \right\}$ is Cauchy if for every $\varepsilon > 0$ there is some $N \in \N$ such that for every $m\ge i \ge N$ and every $n\ge j \ge N$ we have that $|a_{mn}- a_{ij}| < \varepsilon$.
+    \label{def:CauchyDoubleSeq}
+\end{definition}
+
+As is the case with (one-dimensional) sequences in $\R$, we have the following theorem:
+
+\begin{theorem}
+    Every Cauchy double sequence is convergent.
+\end{theorem}
+
+\begin{proof}
+    Suppose that $\left\{ a_{mn} \right\}$ is a Cauchy double sequence. To show that the double sequence is convergent, we need a candidate for the limit. 
+    
+    Let $\left\{ d_n \right\}$ be the sequence defined by $d_n = a_{nn}$ for every $n\in\N$. It is easy to see that definition of Cauchy double sequence implies that $\left\{ d_n \right\}$ is Cauchy in $\C$. Thus, it must converge to some $\ell \in \C$.
+
+    We claim that $\left\{ a_{mn} \right\}$ converges to $\ell $. Let $\varepsilon > 0$ be given. Since $\left\{ a_{m,n} \right\}$ is Cauchy, for every $m\ge p \ge N$ and $n \ge p \ge N$, we have that $|a_{mn}-d_p|< \varepsilon /2$.
+
+    Since $\left\{ d_n \right\}$ converges to $\ell$, there is some $M \in \N$ such that $|d_{p} - \ell | < \varepsilon /2$ for every $p\ge M$.
+    Let $K=\max \left\{ M,N \right\}$. For every $m,n \ge K$, we have that 
+    \begin{align*}
+	|a_{mn}-\ell| &< |a_{mn} - d_K| + |d_K - l| \\
+    &< \varepsilon /2 + \varepsilon /2 = \varepsilon  	
+    \end{align*}
+\end{proof}
+
+\end{document}
